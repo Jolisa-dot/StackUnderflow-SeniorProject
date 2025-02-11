@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Check-In</title>
+</head>
+<body>
+<h1>Daily Check-In</h1>
+
+<div>
+    <h2>Add Entry</h2>
+    <label for="userName">Username:</label>
+    <input type="text" id="userName" name="userName"><br><br>
+
+    <label for="mood">Mood:</label>
+    <input type="text" id="mood" name="mood"><br><br>
+
+    <label for="notes">Notes:</label>
+    <input type="text" id="notes" name="notes"><br><br>
+
+    <label for="streakCount">Streak Count:</label>
+    <input type="text" id="streakCount" name="streakCount"><br><br>
+
+    <label for="date">Date:</label>
+    <input type="text" id="date" name="date"><br><br>
+
+    <button id="addButton">Add Entry</button>
+</div>
+
+<div>
+    <h2>Find Entry</h2>
+    <label for="searchEntry">Date:</label>
+    <input type="text" id="searchEntry" name="searchEntry"><br><br>
+    <button id="findButton">Find Entry</button>
+</div>
+
+<div>
+    <h2>Update Entry</h2>
+    <label for="updateDate">Date:</label>
+    <input type="text" id="updateDate" name="updateDate"><br><br>
+
+    <label for="updateMood">New Mood:</label>
+    <input type="text" id="updateMood" name="updateMood"><br><br>
+
+    <button id="updateButton">Update Entry</button>
+</div>
+
+<div>
+    <h2>Delete Entry</h2>
+    <label for="deleteDate">Date:</label>
+    <input type="text" id="deleteDate" name="deleteDate"><br><br>
+
+    <button id="deleteButton">Delete Entry</button>
+</div>
+
+<div id="message"></div>
+
+<script src="checkin.js"></script>
+</body>
+</html>
