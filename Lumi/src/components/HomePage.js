@@ -3,8 +3,7 @@ import React from 'react';
 function HomePage() {
     return (
         <div>
-            <h1> This is the home page</h1>
-            <p>Secondary Text</p>
+            <h1>Welcome to Lumi</h1>
         </div>
     );
 }
