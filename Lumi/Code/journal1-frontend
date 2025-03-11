@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Mental Wellness Companion</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f4f6f8;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #fff;
+            border-right: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            margin: 0 0 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .entry {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .entry h3 {
+            margin-top: 0;
+        }
+
+        .analyze-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .analyze-button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout {
+            margin-top: auto;
+            padding: 10px;
+            background-color: #f8d7da;
+            color: #721c24;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout:hover {
+            background-color: #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+<div class="sidebar">
+    <h2>Lumi</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Journal</a>
+    <a href="#">Mood Tracking</a>
+    <a href="#">Wellness Activities</a>
+    <a href="#">Resource Hub</a>
+    <div class="logout">Logout</div>
+</div>
+
+<div class="content">
+    <div class="entry">
+        <h3>FEBRUARY 14, 2025</h3>
+        <h4>Placeholder Title</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus mauris conubia congue gravida ornare ultrices efficitur penatibus...</p>
+        <button class="analyze-button">Analyze Entry</button>
+    </div>
+</div>
+</body>
+
+</html>
+
