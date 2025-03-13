@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Check-In & Mood Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex">
+
+<!-- Sidebar -->
+<aside class="w-64 bg-white h-screen shadow-md p-4">
+    <h1 class="text-xl font-bold mb-6">App Name</h1>
+    <nav>
+        <ul>
+            <li class="mb-4"><a href="#" class="text-gray-700">Dashboard</a></li>
+            <li class="mb-4"><a href="#" class="text-gray-700">Journal</a></li>
+            <li class="mb-4"><a href="#" class="text-gray-700 font-bold">Mood Tracking</a></li>
+            <li class="mb-4"><a href="#" class="text-gray-700">Wellness Activities</a></li>
+            <li><a href="#" class="text-gray-700">Resource Hub</a></li>
+        </ul>
+    </nav>
+    <button class="mt-6 text-red-600">Logout</button>
+</aside>
+
+<!-- Main Content -->
+<main class="flex-1 p-6">
+    <h1 class="text-2xl font-semibold mb-4">Daily Check-In</h1>
+
+    <!-- Add Entry -->
+    <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <h2 class="text-lg font-semibold mb-4">Add Entry</h2>
+        <label for="userName" class="block">Username:</label>
+        <input type="text" id="userName" name="userName" class="w-full border p-2 rounded mb-2">
+
+        <label for="mood" class="block">Mood:</label>
+        <input type="text" id="mood" name="mood" class="w-full border p-2 rounded mb-2">
+
+        <label for="notes" class="block">Notes:</label>
+        <input type="text" id="notes" name="notes" class="w-full border p-2 rounded mb-2">
+
+        <label for="streakCount" class="block">Streak Count:</label>
+        <!-- temp until streak function is implemented -->
+        <input type="text" id="streakCount" name="streakCount" class="w-full border p-2 rounded mb-2">
+
+        <label for="date" class="block">Date:</label>
+        <input type="text" id="date" name="date" class="w-full border p-2 rounded mb-2">
+
+        <button id="addButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Add Entry</button>
+    </section>
+
+    <!-- Find Entry -->
+    <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <h2 class="text-lg font-semibold mb-4">Find Entry</h2>
+        <label for="searchEntry" class="block">Date:</label>
+        <input type="text" id="searchEntry" name="searchEntry" class="w-full border p-2 rounded mb-2">
+        <button id="findButton" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Find Entry</button>
+    </section>
+
+    <!-- Update Entry -->
+    <section class="bg-white p-6 rounded-lg shadow mb-6">
+        <h2 class="text-lg font-semibold mb-4">Update Entry</h2>
+        <label for="updateDate" class="block">Date:</label>
+        <input type="text" id="updateDate" name="updateDate" class="w-full border p-2 rounded mb-2">
+
+        <label for="updateMood" class="block">New Mood:</label>
+        <input type="text" id="updateMood" name="updateMood" class="w-full border p-2 rounded mb-2">
+
+        <button id="updateButton" class="mt-4 px-4 py-2 bg-green-500 text-white rounded">Update Entry</button>
+    </section>
+
+    <!-- Delete Entry -->
+    <section class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-lg font-semibold mb-4">Delete Entry</h2>
+        <label for="deleteDate" class="block">Date:</label>
+        <input type="text" id="deleteDate" name="deleteDate" class="w-full border p-2 rounded mb-2">
+
+        <button id="deleteButton" class="mt-4 px-4 py-2 bg-red-500 text-white rounded">Delete Entry</button>
+    </section>
+
+    <div id="message" class="mt-4 text-gray-700"></div>
+
+    <!-- Mood Tracking Section -->
+    <section class="bg-white p-6 rounded-lg shadow mt-10">
+        <h2 class="text-lg font-semibold mb-4">Mood Tracker</h2>
+        <div class="flex justify-center items-center bg-gray-200 h-32 rounded-lg">
+            <p>Image Placeholder</p>
+        </div>
+        <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Log Emotion</button>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow mt-6">
+        <h3 class="text-lg font-semibold mb-4">How are you feeling?</h3>
+        <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="moodSelect" class="form-radio">
+                <span>Happy</span>
+            </label>
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="moodSelect" class="form-radio">
+                <span>Sad</span>
+            </label>
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="moodSelect" class="form-radio">
+                <span>Excited</span>
+            </label>
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="moodSelect" class="form-radio">
+                <span>Angry</span>
+            </label>
+        </div>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow mt-6">
+        <h3 class="text-lg font-semibold mb-4">Who Were You With?</h3>
+        <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="with" class="form-radio">
+                <span>Friends</span>
+            </label>
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="with" class="form-radio">
+                <span>Family</span>
+            </label>
+        </div>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow mt-6">
+        <h3 class="text-lg font-semibold mb-4">Where Did You Go?</h3>
+        <div class="grid grid-cols-2 gap-4">
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="location" class="form-radio">
+                <span>Home</span>
+            </label>
+            <label class="flex items-center space-x-2 bg-gray-100 p-4 rounded">
+                <input type="radio" name="location" class="form-radio">
+                <span>Work</span>
+            </label>
+        </div>
+    </section>
+
+</main>
+
+<script src="checkin.js"></script>
+</body>
+</html>
