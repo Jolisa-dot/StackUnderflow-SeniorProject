@@ -4,7 +4,6 @@ import './Journal.css';
 function Journal() {
     return (
         <div>
-<body>
 <div class="sidebar">
     <h2>Lumi</h2>
     <a href="#">Dashboard</a>
@@ -23,7 +22,6 @@ function Journal() {
         <button class="analyze-button">Analyze Entry</button>
     </div>
 </div>
-</body>
 </div>
     );
 }
