@@ -1,0 +1,62 @@
+.container{
+    padding: 10px;
+    margin: 0;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+}
+
+/* DASHBOARD'S HEADER */
+.dash-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dash-header ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.dash-header ul a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ICONS */
+.fa{
+    color: black;
+}
+
+.fa:hover{
+    color: white;
+}
+
+/* PLACEHOLDERS */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-container .row1 {
+    grid-area: content;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
