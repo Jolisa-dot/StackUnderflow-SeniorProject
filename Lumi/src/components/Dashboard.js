@@ -1,7 +1,12 @@
 import React from 'react';
 import './Dashboard.css'
+import {useState} from 'react'
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css'
 
 function Dashboard() {
+    const [date, setDate] = useState(new Date());
+
     return (
         <div className="container">
             <div className="dash-header">
@@ -12,14 +17,17 @@ function Dashboard() {
                     <a href='#' className="profile fa fa-user-large"></a>
                 </ul>
             </div>
+
+            <!--TODO: Reformat Dashboard Content properly-->
             <div className="main-container">
                 <div className="card">
-                    <h2>Welcome!</h2>
-                    <p>This is a placeholder for the main dashboard content.</p>
+                    <h2>Daily Check-In</h2>
+                    <h6>How are you feeling at this moment?</h6>
+                    <img src="#" alt="Daily Check In" />
+                    <button>Log Emotion</button>
                 </div>
                 <div className="card">
-                    <h2>Statistics</h2>
-                    <p>Placeholder for charts or statistics.</p>
+                    <Calendar onChange={setDate} value={date} />
                 </div>
                 <div className="card">
                     <h2>Recent Activity</h2>
