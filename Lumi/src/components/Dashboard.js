@@ -18,7 +18,7 @@ function Dashboard() {
                 </ul>
             </div>
 
-            <!--TODO: Reformat Dashboard Content properly-->
+    {/*TODO: Reformat Dashboard Content properly*/}
             <div className="main-container">
                 <div className="card">
                     <h2>Daily Check-In</h2>
