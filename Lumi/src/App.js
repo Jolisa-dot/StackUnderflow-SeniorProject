@@ -22,12 +22,14 @@ function Sidebar({isOpen, toggleSidebar}) {
                     </li>
 
                     {/* Menu options */}
-                    <a href="/" className="nav-link">
+
+                    {/* Link for 'Home' can be deleted.. Redundant with Dashboard*/}
+                    {/*<a href="/" className="nav-link">
                         <div className="home-button">
                             <span className="fa fa-home"></span>
                             <span>Home</span>
                         </div>
-                    </a>
+                    </a> */}
                     <a href="/dashboard" className="nav-link">
                         <div className="dashboard-button">
                             <span className="fa fa-dashboard"></span>

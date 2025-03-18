@@ -60,9 +60,10 @@ input {
 
 .options {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:center;
+    align-items:center;
     margin-top: 10px;
+    margin-right: 5px;
 }
 
 .forgot-password {

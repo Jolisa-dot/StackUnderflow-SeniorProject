@@ -1,4 +1,4 @@
-.App {
+/*.App {
     text-align: center;
 }
 
@@ -35,7 +35,7 @@
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 .app-container {
     display: flex;
@@ -61,15 +61,20 @@
 }
 
 .close-btn {
-    background: #cccccc;
+    background: transparent;
     border: none;
     font-size: 20px;
     color: black;
     position: absolute;
-    top: 20px;
-    left: 220px;
+    top: 10px;
+    right: 10px;
     width: 50px;
     cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #666;
+    background: transparent;
 }
 
 .sidebar ul {
@@ -118,6 +123,10 @@
 .logout-button {
     position: relative;
     top: 350px;
+}
+
+.logout-button:hover {
+    color: #666;
 }
 
 .sidebar-heading{
