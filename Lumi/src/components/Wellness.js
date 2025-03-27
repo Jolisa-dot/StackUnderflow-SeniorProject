@@ -1,11 +1,33 @@
 import React from 'react';
-
+import './Wellness.css'
+import placeholderimage from'./placeholderimg.png'
 function Wellness() {
     return (
-        <div>
-            <h1> This is the wellness page</h1>
-            
+        <><div className='card-container'>
+        <div className='activity-card'>
+            <img src={placeholderimage}></img>
+            <br></br>
+            <br></br>
+            <p>Activity description goes here...</p>
+        </div><div className='activity-card'>
+                <img src={placeholderimage}></img>
+                <br></br>
+                <br></br>
+                <p>Activity description goes here...</p>
+            </div>
+            <div className='activity-card'>
+            <img src={ placeholderimage }></img>
+            <br></br>
+            <br></br>
+            <p>Activity description goes here...</p>
         </div>
+        <div className='activity-card'>
+            <img src={ placeholderimage }></img>
+            <br></br>
+            <br></br>
+            <p>Activity description goes here...</p>
+        </div>
+        </div></>
     );
 }
 

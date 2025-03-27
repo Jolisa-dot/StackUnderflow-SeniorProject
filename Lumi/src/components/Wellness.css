@@ -1,0 +1,19 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.activity-card {
+    background-color: white;
+    flex-wrap:wrap;
+    padding: 25px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
