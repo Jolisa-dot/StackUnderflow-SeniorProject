@@ -18,7 +18,6 @@ function Dashboard() {
                 </ul>
             </div>
 
-<<<<<<< HEAD
             <div className="row1-container">
                 <div className="row1-wrapper">
                     <div className="check-in-container">
@@ -31,23 +30,6 @@ function Dashboard() {
                         <img src="" alt="check-in" className="check-in-img"/>
                         <button className="check-in-button">Log Emotion</button>
                     </div>
-=======
-    {/*TODO: Reformat Dashboard Content properly*/}
-            <div className="main-container">
-                <div className="card">
-                    <h2>Daily Check-In</h2>
-                    <h6>How are you feeling at this moment?</h6>
-                    <img src="#" alt="Daily Check In" />
-                    <button>Log Emotion</button>
-                </div>
-                <div className="card">
-                    <Calendar onChange={setDate} value={date} />
-                </div>
-                <div className="card">
-                    <h2>Recent Activity</h2>
-                    <p>Placeholder for recent updates or activity feed.</p>
-                </div>
->>>>>>> origin/dashboard-branch
 
                     <div className="calendar-container">
                         <h3 className="main-title">Calendar</h3>
