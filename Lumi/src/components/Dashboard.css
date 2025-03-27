@@ -1,0 +1,131 @@
+/** main body section **/
+.main-content{
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+
+.content-header,.row1-container,.row2-container, .row3-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 5px;
+    padding: 25px 2rem;
+    margin-bottom: 1rem;
+}
+
+
+.row1-wrapper, .row2-wrapper, .row3-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.main-title{
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+/** header section **/
+.content-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.options{
+    cursor: pointer;
+    border-radius: 50%;
+    gap: 10px;
+}
+
+.options .fa{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.options .fa:hover{
+    color: blue;
+}
+
+/** row 1 section **/
+/* check in elements */
+.check-in-header{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.check-in-img{
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.check-in-streak{
+    color: white;
+    padding: 0.8rem;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    /*background: orange;*/
+}
+
+/* calendar elements */
+.calendar-container button{
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+}
+
+/** row 2 section **/
+.row2-wrapper span{
+    padding: 1.2rem;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/** row 3 section **/
+.row3-container{
+    padding: 0;
+
+}
+
+.row3-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.suggestion-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.suggestion-container:hover{
+    transform: translateY(-5px);
+}
