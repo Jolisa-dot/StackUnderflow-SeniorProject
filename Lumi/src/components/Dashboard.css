@@ -1,16 +1,25 @@
-/** main body section **/
-.main-content{
-    position: relative;
-    background: transparent;
-    width: 100%;
-    padding: 1.2rem;
+h1{
+    font-size: 24px;
 }
 
+button:hover {
+    cursor: pointer;
+}
 
-.content-header,.row1-container,.row2-container, .row3-container{
+.container{
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container, .main-container {
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.row1,.row2, .row3{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
     background: white;
     border-radius: 5px;
@@ -18,29 +27,15 @@
     margin-bottom: 1rem;
 }
 
-
-.row1-wrapper, .row2-wrapper, .row3-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem;
-}
-
-.main-title{
-    padding-bottom: 10px;
-    font-size: 25px;
-}
-
 /** header section **/
-.content-header{
+.header-container{
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
+    padding-bottom: 10px;
 }
-
 
 .options{
-    cursor: pointer;
-    border-radius: 50%;
     gap: 10px;
 }
 
@@ -49,14 +44,25 @@
     color: black;
 }
 
+.options button {
+    background: none;
+}
+
 .options .fa:hover{
     color: blue;
 }
 
+/** main body section **/
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
 /** row 1 section **/
 /* check in elements */
-.check-in-header{
+.check-in-container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
@@ -70,17 +76,6 @@
     justify-content: space-between;
 }
 
-.check-in-streak{
-    color: white;
-    padding: 0.8rem;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 1rem;
-    /*background: orange;*/
-}
-
 /* calendar elements */
 .calendar-container button{
     background-color: #ffffff;
@@ -88,44 +83,45 @@
     border: 1px solid #ccc;
     padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
     width: 80%;
     text-align: center;
 }
 
 /** row 2 section **/
-.row2-wrapper span{
-    padding: 1.2rem;
-    width: 400px;
-    height: 350px;
+.row2{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 350px;
 }
 
 /** row 3 section **/
-.row3-container{
+.row3{
     padding: 0;
-
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
 }
 
-.row3-wrapper{
+.activities-container{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
     gap: 2rem;
 }
 
-.suggestion-container{
-    display: flex;
-    flex-direction: column;
+.activity{
+    background-color: white;
     align-items: flex-start;
     padding: 3.2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+    width: 100%;
 }
 
-.suggestion-container:hover{
+.activity:hover{
     transform: translateY(-5px);
 }

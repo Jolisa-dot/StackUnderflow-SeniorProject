@@ -1,76 +1,86 @@
 import React from 'react';
 import './Dashboard.css'
 import {useState} from 'react'
+import { useNavigate } from "react-router-dom";
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 
 function Dashboard() {
     const [date, setDate] = useState(new Date());
 
+    {/** navigation functions **/}
+    const navigate = useNavigate();
+    const goToCheckIn = () => {
+        navigate("/daily-check-in");
+    };
+
+    const goToActivity = () => {
+        navigate(`/activity/}`);
+    }
+
     return (
-        <div className="main-content">
-            <div className="content-header">
-                <span className="main-title">Welcome Back, [name]</span>
-                <ul className="options">
-                    <a href='#' className="settings fa fa-gear"></a>
-                    <a href='#' className="notifications fa fa-bell"></a>
-                    <a href='#' className="profile fa fa-user-large"></a>
-                </ul>
+        <div className="container">
+            {/** HEADER SECTION **/}
+            <div className="header-container">
+                <div className="header-left">
+                    <h1> Welcome Back,
+                        <span className="name"> [name]</span>
+                    </h1>
+                </div>
+
+                <div className="header-right">
+                    <div className="options">
+                        <button className="settings fa fa-gear"></button>
+                        <button className="notifications fa fa-bell"></button>
+                        <button className="profile fa fa-user-large"></button>
+                    </div>
+                </div>
             </div>
 
-            <div className="row1-container">
-                <div className="row1-wrapper">
+            {/** MAIN CONTENT SECTION **/}
+            <div className="main-container">
+                <div className="row1">
+                    {/** CHECK-IN SECTION **/}
                     <div className="check-in-container">
-                        <div className="check-in-header">
-                            <h3 className="main-title">Daily Check-In</h3>
-                            {/* TODO: Fix span such that streak is only displayed if streak is active*/}
-                            <span className="check-in-streak"></span>
-                        </div>
-                        <h5 className="subtitle">How are you feeling at the moment?</h5>
-                        <img src="" alt="check-in" className="check-in-img"/>
-                        <button className="check-in-button">Log Emotion</button>
+                        <h1>Daily Check-In</h1>
+                        <p> How are you feeling?</p>
+                        <img src="" alt="placeholder"/>
+                        <button onClick={goToCheckIn}> Check In</button>
                     </div>
 
+                    {/** CALENDAR SECTION **/}
                     <div className="calendar-container">
-                        <h3 className="main-title">Calendar</h3>
+                        <h1>Calendar</h1>
                         <Calendar onChange={setDate} value={date}/>
                     </div>
                 </div>
-            </div>
 
-            <div className="row2-container">
-                <div className="row2-wrapper">
+                <div className="row2">
+                    {/** MOOD CHART SECTION **/}
                     <div className="mood-chart-container">
-                        <h3 className="main-title">Mood Chart</h3>
-                        <span className="mood-chart-area">
-                            <img src="#" alt="mood chart" className="mood-chart"/>
-                        </span>
+                        <h1>Mood Chart</h1>
+                        <img src="" alt="placeholder"/>
                     </div>
 
-                    <div className="wellness-quote-container">
-                        <h3 className="main-title">Wellness Quote</h3>
-                        <span className="wellness-quote-area">
-                            <img src="#" alt="wellness quote" className="wellness-quote-img"/>
-                        </span>
+                    {/** QUOTE SECTION **/}
+                    <div className="quote-container">
+                        <h1>Quote</h1>
+                        <img src="" alt="placeholder"/>
                     </div>
                 </div>
-            </div>
 
-            <div className="row3-container">
-                <div className="row3-wrapper">
-                    <div className="suggestion-container">
-                        <h5 className="subtitle">Suggested Wellness Activity</h5>
-                        <span className="main-title">[ACTIVITY]</span>
-                    </div>
-
-                    <div className="suggestion-container">
-                        <h5 className="subtitle">Suggested Wellness Activity</h5>
-                        <span className="main-title">[ACTIVITY]</span>
-                    </div>
-
-                    <div className="suggestion-container">
-                        <h5 className="subtitle">Suggested Wellness Activity</h5>
-                        <span className="main-title">[ACTIVITY]</span>
+                <div className="row3">
+                    {/** ACTIVITIES SECTION **/}
+                    <div className="activities-container">
+                        <div className="activity" onClick={goToActivity}>
+                            <h1>Activity</h1>
+                        </div>
+                        <div className="activity" onClick={goToActivity}>
+                            <h1>Activity</h1>
+                        </div>
+                        <div className="activity" onClick={goToActivity}>
+                            <h1>Activity</h1>
+                        </div>
                     </div>
                 </div>
             </div>
