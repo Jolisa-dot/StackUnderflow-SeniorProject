@@ -133,6 +133,58 @@ app.get('/api/moodGraph', async (req, res) => {
         res.status(500).json({ error: "Failed to fetch mood graph data." });
     }
 });
+const journalSchema = new mongoose.Schema({
+    title: String,
+    content: String,
+    date: { type: Date, default: Date.now }
+});
+
+const Journal = mongoose.model('Journal', journalSchema);
+
+const axios = require('axios');
+
+app.post('/saveJournal', async (req, res) => {
+    const { title, content } = req.body;
+
+    try {
+        const journal = new Journal({ title, content });
+        await journal.save();
+
+        const nlpResponse = await axios.post("http://localhost:5001/analyze", {
+            text: content
+        });
+        res.status(201).json({
+            message: "Journal entry saved!",
+            analysis: nlpResponse.data
+        });
+    } catch (error) {
+        console.error("Error saving or analyzing journal:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+app.get('/getJournal', async (req, res) => {
+    try {
+        const journals = await Journal.find({});
+        res.json(journals);
+    } catch (error) {
+        console.error("Error fetching journal entries:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
+app.get('/api/journalData', async (req, res) => {
+    try {
+        const journals = await Journal.find({}).sort({ date: -1 });
+        res.json(journals);
+    } catch (error) {
+        console.error("Error fetching journal data:", error);
+        res.status(500).json({ error: "Failed to fetch journal data." });
+    }
+});
+
+app.get('/journal', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'journal.html'));
+});
 
 
 app.use(express.static(path.join(__dirname, 'public')));
