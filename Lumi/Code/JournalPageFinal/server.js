@@ -141,18 +141,27 @@ const journalSchema = new mongoose.Schema({
 
 const Journal = mongoose.model('Journal', journalSchema);
 
+const axios = require('axios');
+
 app.post('/saveJournal', async (req, res) => {
     const { title, content } = req.body;
+
     try {
         const journal = new Journal({ title, content });
         await journal.save();
-        res.status(201).json({ message: "Journal entry saved!" });
+
+        const nlpResponse = await axios.post("http://localhost:5001/analyze", {
+            text: content
+        });
+        res.status(201).json({
+            message: "Journal entry saved!",
+            analysis: nlpResponse.data
+        });
     } catch (error) {
-        console.error("Error saving journal:", error);
+        console.error("Error saving or analyzing journal:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
-
 app.get('/getJournal', async (req, res) => {
     try {
         const journals = await Journal.find({});
