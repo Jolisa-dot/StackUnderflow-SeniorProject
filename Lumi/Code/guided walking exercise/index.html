@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guided Wellness Walk (Desktop + VR Movement)</title>
+</head>
+<body style="margin:0; overflow:hidden; background:black;">
+
+<button id="startButton" style="position:absolute; top:20px; left:50%; transform:translateX(-50%); padding:10px 20px; font-size:18px;">Start Walk</button>
+
+<script type="module">
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
+    import { VRButton } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/webxr/VRButton.js';
+
+    let camera, scene, renderer;
+    let controller;
+    let waypoints = [];
+    let currentWaypoint = 0;
+    let promptDiv;
+    let finished = false;
+
+    let moveForward = false, moveBackward = false, moveLeft = false, moveRight = false;
+    const velocity = new THREE.Vector3();
+    const direction = new THREE.Vector3();
+    let prevTime = performance.now();
+
+    const prompts = [
+        "Take a deep breath.",
+        "Feel your body moving gently.",
+        "Relax your shoulders and neck.",
+        "Focus on your next step.",
+        "Smile — you're doing great."
+    ];
+
+    document.getElementById('startButton').addEventListener('click', init);
+
+    function init() {
+        document.getElementById('startButton').style.display = 'none';
+
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 50);
+        camera.position.set(0, 1.6, 0); // Start at human eye level
+
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.xr.enabled = true;
+        document.body.appendChild(renderer.domElement);
+        document.body.appendChild(VRButton.createButton(renderer));
+
+        controller = renderer.xr.getController(0);
+        scene.add(controller);
+
+        promptDiv = document.createElement('div');
+        promptDiv.style.position = 'absolute';
+        promptDiv.style.top = '10%';
+        promptDiv.style.width = '100%';
+        promptDiv.style.textAlign = 'center';
+        promptDiv.style.color = 'white';
+        promptDiv.style.fontSize = '24px';
+        promptDiv.style.fontFamily = 'sans-serif';
+        promptDiv.style.opacity = '0';
+        promptDiv.style.textShadow = '0 0 5px black';
+        document.body.appendChild(promptDiv);
+
+        createWaypoints();
+        createParticles();
+
+        document.addEventListener('keydown', onKeyDown);
+        document.addEventListener('keyup', onKeyUp);
+
+        controller.addEventListener('selectstart', onSelect);
+
+        renderer.setAnimationLoop(render);
+    }
+
+    function createWaypoints() {
+        for (let i = 0; i < prompts.length; i++) {
+            const sphereGeometry = new THREE.SphereGeometry(0.1, 32, 32);
+            const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0x66ccff });
+            const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+
+            const xOffset = (i % 2 === 0 ? 0.5 : -0.5);
+            sphere.position.set(xOffset, 1.5, -(i * 2));
+            scene.add(sphere);
+            waypoints.push(sphere);
+        }
+    }
+
+    function createParticles() {
+        const particleGeometry = new THREE.SphereGeometry(0.01, 8, 8);
+        const particleMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff, opacity: 0.5, transparent: true });
+
+        for (let i = 0; i < 50; i++) {
+            const particle = new THREE.Mesh(particleGeometry, particleMaterial);
+            particle.position.set(
+                (Math.random() - 0.5) * 5,
+                Math.random() * 3 + 1,
+                (Math.random() - 0.5) * 5
+            );
+            scene.add(particle);
+        }
+    }
+
+    function onKeyDown(event) {
+        switch (event.code) {
+            case 'ArrowUp':
+            case 'KeyW':
+                moveForward = true;
+                break;
+            case 'ArrowLeft':
+            case 'KeyA':
+                moveLeft = true;
+                break;
+            case 'ArrowDown':
+            case 'KeyS':
+                moveBackward = true;
+                break;
+            case 'ArrowRight':
+            case 'KeyD':
+                moveRight = true;
+                break;
+        }
+    }
+
+    function onKeyUp(event) {
+        switch (event.code) {
+            case 'ArrowUp':
+            case 'KeyW':
+                moveForward = false;
+                break;
+            case 'ArrowLeft':
+            case 'KeyA':
+                moveLeft = false;
+                break;
+            case 'ArrowDown':
+            case 'KeyS':
+                moveBackward = false;
+                break;
+            case 'ArrowRight':
+            case 'KeyD':
+                moveRight = false;
+                break;
+        }
+    }
+
+    function onSelect() {
+        if (finished) return;
+
+        if (currentWaypoint < waypoints.length) {
+            const target = waypoints[currentWaypoint];
+            const distance = camera.position.distanceTo(target.position);
+            if (distance < 1.5) {
+                showPrompt(currentWaypoint);
+                currentWaypoint++;
+            }
+        }
+    }
+
+    function render() {
+        const time = performance.now();
+        const delta = (time - prevTime) / 1000;
+
+        direction.z = Number(moveForward) - Number(moveBackward);
+        direction.x = Number(moveRight) - Number(moveLeft);
+        direction.normalize();
+
+        const speed = 2.0; // Units per second
+
+        if (moveForward || moveBackward) {
+            camera.position.z += direction.z * speed * delta;
+        }
+        if (moveLeft || moveRight) {
+            camera.position.x += direction.x * speed * delta;
+        }
+
+        prevTime = time;
+
+        if (renderer.xr.isPresenting) {
+            const userPosition = new THREE.Vector3();
+            camera.getWorldPosition(userPosition);
+
+            if (!finished && currentWaypoint < waypoints.length) {
+                const target = waypoints[currentWaypoint].position;
+                const distance = userPosition.distanceTo(target);
+
+                if (distance < 1.5) {
+                    showPrompt(currentWaypoint);
+                    currentWaypoint++;
+                }
+            }
+
+            if (!finished && currentWaypoint >= waypoints.length) {
+                endExercise();
+            }
+
+            waypoints.forEach((sphere, index) => {
+                if (sphere) {
+                    const scale = 1 + 0.05 * Math.sin(Date.now() * 0.002 + index);
+                    sphere.scale.set(scale, scale, scale);
+                }
+            });
+        }
+
+        renderer.render(scene, camera);
+    }
+
+    function showPrompt(index) {
+        promptDiv.style.opacity = 0;
+        promptDiv.textContent = prompts[index];
+
+        let opacity = 0;
+        const fadeIn = setInterval(() => {
+            opacity += 0.02;
+            promptDiv.style.opacity = opacity;
+            if (opacity >= 1) clearInterval(fadeIn);
+        }, 30);
+    }
+
+    function endExercise() {
+        finished = true;
+        promptDiv.textContent = "Well done. 🌿";
+    }
+</script>
+
+</body>
+</html>
