@@ -6,6 +6,7 @@ import Journal from './components/Journal';
 import Wellness from './components/Wellness';
 import Resources from './components/Resources';
 import Dashboard from './components/Dashboard';
+import MoodTracker from "./components/mood_tracker";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -80,6 +81,7 @@ function App() {
                         <Route path="/journal" element={<Journal/>}/>
                         <Route path="/wellness" element={<Wellness/>}/>
                         <Route path="/resources" element={<Resources/>}/>
+                        <Route path="/check-in" element={<MoodTracker/>}/>
                         <Route path="/login" element={<HomePage/>}/>
                     </Routes>
                 </div>

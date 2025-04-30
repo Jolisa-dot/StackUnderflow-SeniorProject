@@ -11,7 +11,7 @@ function Dashboard() {
     {/** navigation functions **/}
     const navigate = useNavigate();
     const goToCheckIn = () => {
-        navigate("/daily-check-in");
+        navigate("/check-in");
     };
 
     const goToActivity = () => {

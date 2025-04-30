@@ -32,7 +32,7 @@ const Entry = mongoose.model('Entry', checkInSchema);
 
 // Serve HTML page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'mood_tracker.html'));
+    res.sendFile(path.join(__dirname, 'public', 'mood_tracker.js'));
 });
 
 
