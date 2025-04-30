@@ -38,12 +38,19 @@
             padding: 20px;
         }
 
-        .entry {
+        textarea {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .journal-content {
+            justify-items: center;
+            justify-content: center;
         }
 
         .entry h3 {
@@ -51,16 +58,17 @@
         }
 
         .analyze-button {
-            background-color: #007bff;
+            background-color: teal;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100 px;
         }
 
         .analyze-button:hover {
-            background-color: #0056b3;
+            background-color: #333;
         }
 
         .logout {

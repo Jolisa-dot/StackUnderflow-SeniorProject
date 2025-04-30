@@ -6,42 +6,69 @@
 }
 
 body {
-    display: flex;
+    background-color: #f5f6f8;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex; 
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f5f6f8;
 }
 
+
 .container {
-    display: flex;
-    width: 800px;
-    height: 450px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 40px; 
+    box-sizing: border-box; 
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .image-section {
     flex: 1;
-    background: #d9d9d9;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 60%; 
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 .login-section {
-    flex: 1;
-    padding: 40px;
+    width: 350px; 
+    padding: 30px; 
+    margin-right: 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box; 
 }
+
 
 h2 {
     margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 label {
     display: block;
     font-size: 14px;
     margin-top: 10px;
+    color: #555;
+    font-weight: bold;
 }
 
 input {
@@ -50,6 +77,7 @@ input {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .password-note {
@@ -60,39 +88,62 @@ input {
 
 .options {
     display: flex;
-    justify-content:center;
-    align-items:center;
-    margin-top: 10px;
-    margin-right: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.options input[type="checkbox"],
+.options label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkbox-wrap label {
+    display: inline;
 }
 
 .forgot-password {
     font-size: 12px;
     text-decoration: none;
-    color: blue;
+    color: teal;
 }
 
 button {
     width: 100%;
-    background: blue;
+    background: teal;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    font-size: 1em;
 }
 
 button:hover {
-    background: darkblue;
+    background: #008080;
 }
 
 .signup {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 14px;
+    text-align: center;
+    color: #555;
 }
 
 .signup a {
-    color: blue;
+    color: teal;
     text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
 }

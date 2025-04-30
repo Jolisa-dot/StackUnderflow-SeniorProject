@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Resources.css'
 const mentalHealthResources = [
     {
         category: "Crisis Support",
@@ -26,17 +26,17 @@ const mentalHealthResources = [
 
 const ResourceHub = () => {
     return (
-        <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
-            <h2 style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "16px" }}>Mental Health Resource Hub</h2>
-            <p style={{ marginBottom: "16px", color: "#555" }}>Find support and resources for mental well-being.</p>
+        <div className='link-container'>
+            <h2>Mental Health Resource Hub</h2>
+            <p>Find support and resources for mental well-being.</p>
             <div>
                 {mentalHealthResources.map((category, index) => (
-                    <div key={index} style={{ padding: "16px", border: "1px solid #ddd", borderRadius: "8px", marginBottom: "16px", backgroundColor: "#f9f9f9" }}>
-                        <h3 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "8px" }}>{category.category}</h3>
+                    <div id='rs' key={index}>
+                        <h3>{category.category}</h3>
                         <ul>
                             {category.links.map((link, i) => (
                                 <li key={i} style={{ marginBottom: "8px" }}>
-                                    <a href={link.url} target="_blank" rel="noopener noreferrer" style={{ color: "#007bff", textDecoration: "none", fontWeight: "500" }}>
+                                    <a href={link.url} target="_blank" rel="noopener noreferrer">
                                         {link.name}
                                     </a>
                                 </li>

@@ -15,18 +15,6 @@ function Wellness() {
                 <br></br>
                 <p>Activity description goes here...</p>
             </div>
-            <div className='activity-card'>
-            <img src={ placeholderimage }></img>
-            <br></br>
-            <br></br>
-            <p>Activity description goes here...</p>
-        </div>
-        <div className='activity-card'>
-            <img src={ placeholderimage }></img>
-            <br></br>
-            <br></br>
-            <p>Activity description goes here...</p>
-        </div>
         </div></>
     );
 }
