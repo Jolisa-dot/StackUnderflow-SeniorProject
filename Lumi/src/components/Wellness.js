@@ -1,6 +1,6 @@
 import React from 'react';
 import './Wellness.css'
-import placeholderimage from'./placeholderimg.png'
+import walk from './Guided Walk.png'
 import field from './field-scene.gif';
 
 function Wellness() {
@@ -22,7 +22,7 @@ function Wellness() {
             target="_blank"
             rel="noopener noreferrer"
             className="open-exercise-button"
-                ><img src={placeholderimage}></img></a>
+                ><img src={walk}></img></a>
                 <br></br>
                 <br></br>
                 <p>Activity description goes here...</p>
