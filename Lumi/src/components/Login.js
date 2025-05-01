@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import logo from './lumi-logo.jpg';
+import logo from './Lumi Sideways Logo.jpg';
 
 function HomePage() {
     return ( 
@@ -9,7 +9,7 @@ function HomePage() {
                 <img src={logo} alt='Logo'/>
             </div>
             <div className="login-section">
-                <h2>Welcome to Lumi!</h2>
+                <h2>Welcome!</h2>
                 <form>
                     <label for="email">Email Address</label>
                     <input type="email" id="email" placeholder="johnsmith@company.com" required/>

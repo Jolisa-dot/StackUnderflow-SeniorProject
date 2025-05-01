@@ -28,14 +28,14 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-
+/*
 .image-section {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 60%; 
-}
+} */
 
 .image-section img {
     max-width: 100%;
