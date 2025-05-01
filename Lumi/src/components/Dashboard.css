@@ -89,86 +89,39 @@ button:hover {
 
 /** row 2 section **/
 .row2{
-    background: linear-gradient(to right, #003366, #008080);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
     height: 350px;
-    color: white
 }
 
-.check-in-container p {
-    margin-bottom: 2rem;
-}
-
-.check-in-container button{
-    margin-top: 1em;
-}
-
-.mood-container {
-    padding: 1rem;
-    border-radius: 1rem;
-    transition: all 0.5s ease;
+/** row 3 section **/
+.row3{
+    padding: 0;
+    background-color: transparent;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+}
+
+.activities-container{
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-.mood-label {
-    font-size: 0.875rem;
-    color: #4b5563; /* Tailwind's gray-600 */
+    width: 100%;
+    gap: 2rem;
 }
 
-.mood-bg-very-sad {
-    background-color: #bfdbfe; /* light blue */
-}
-.mood-bg-sad {
-    background-color: #cfe0f5;
-}
-.mood-bg-neutral {
-    background-color: #e5e7eb;
-}
-.mood-bg-happy {
-    background-color: #d1fae5;
-}
-.mood-bg-very-happy {
-    background-color: #fef3c7;
+.activity{
+    background-color: white;
+    align-items: flex-start;
+    padding: 3.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    width: 100%;
 }
 
-
-@keyframes fadeScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.fade-scale {
-    animation: fadeScale 0.5s ease-in-out;
-}
-
-/** quote section **/
-.quote-container blockquote {
-    font-style: italic;
-    margin: 5em;
-    padding: 2em;
-    background: white;
-    color:  #008080;
-    border-left: 5px solid #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
-}
-
-.quote-container blockquote footer {
-    margin-top: 0.5em;
-    text-align: right;
-    font-weight: bold;
+.activity:hover{
+    transform: translateY(-5px);
 }
