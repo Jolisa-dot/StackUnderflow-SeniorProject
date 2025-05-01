@@ -21,9 +21,8 @@ function Sidebar({isOpen, toggleSidebar, setSidebarOpen}) {
                 <ul className="nav-link-group">
                     {/* Header space for logo */}
                     <li className="nav-link sidebar-heading">
-                    <img src="#" alt="lumi-logo" />
+                    <br/>
                     </li>
-
                     {/* Menu options */}
 
                     <a href="/dashboard" className="nav-link">

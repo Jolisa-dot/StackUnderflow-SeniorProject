@@ -68,21 +68,6 @@ function Dashboard() {
                         <img src="" alt="placeholder"/>
                     </div>
                 </div>
-
-                <div className="row3">
-                    {/** ACTIVITIES SECTION **/}
-                    <div className="activities-container">
-                        <div className="activity" onClick={goToActivity}>
-                            <h1>Activity</h1>
-                        </div>
-                        <div className="activity" onClick={goToActivity}>
-                            <h1>Activity</h1>
-                        </div>
-                        <div className="activity" onClick={goToActivity}>
-                            <h1>Activity</h1>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );
