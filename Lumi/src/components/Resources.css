@@ -15,13 +15,28 @@ p {
     color: #555;
 }
 
-rs {
+#rs {
     padding: 16px; 
     border: 1px solid #ddd; 
     border-radius: 8px; 
     margin-bottom: 16px; 
     background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
 }
+
+#rs:hover {
+    transform: scale(1.02);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a:hover {
+    color: darkcyan;
+}
+
 
 h3 {
     font-size: 20px; 

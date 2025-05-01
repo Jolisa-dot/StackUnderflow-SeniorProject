@@ -1,86 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f6f8;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            background-color: #f4f6f8;
-        }
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
 
-        .sidebar {
-            width: 220px;
-            background-color: #fff;
-            border-right: 1px solid #ccc;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
+.sidebar h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #333;
+}
 
-        .sidebar h2 {
-            margin: 0 0 20px;
-        }
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
 
-        .sidebar a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            border-radius: 5px;
-        }
+.sidebar a:hover {
+    background-color: #e0e0e0;
+}
 
-        .sidebar a:hover {
-            background-color: #e0e0e0;
-        }
+/* Main content area */
+.content {
+    margin-left: 220px;
+    flex-grow: 1;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
 
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-        }
+/* Text area (journal input) */
+textarea {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    resize: vertical;
+    font-size: 16px;
+}
 
-        textarea {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            width: 500px;
-            height: 300px;
-        }
+/* Entry section */
+.entry h3 {
+    margin-top: 20px;
+}
 
-        .journal-content {
-            justify-items: center;
-            justify-content: center;
-        }
+/* Analyze button */
+.analyze-button {
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.2s ease;
+}
 
-        .entry h3 {
-            margin-top: 0;
-        }
+.analyze-button:hover {
+    background-color: #004d4d;
+}
 
-        .analyze-button {
-            background-color: teal;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100 px;
-        }
+/* Logout button */
+.logout {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
 
-        .analyze-button:hover {
-            background-color: #333;
-        }
+.logout:hover {
+    background-color: #f5c6cb;
+}
 
-        .logout {
-            margin-top: auto;
-            padding: 10px;
-            background-color: #f8d7da;
-            color: #721c24;
-            text-align: center;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
 
-        .logout:hover {
-            background-color: #f5c6cb;
-        }
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
