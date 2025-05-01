@@ -23,9 +23,7 @@ function Dashboard() {
             {/** HEADER SECTION **/}
             <div className="header-container">
                 <div className="header-left">
-                    <h1> Welcome Back,
-                        <span className="name"> [name]</span>
-                    </h1>
+                    <h1> Welcome Back!        </h1>
                 </div>
 
                 <div className="header-right">
@@ -55,19 +53,19 @@ function Dashboard() {
                     </div>
                 </div>
 
+                {/**
                 <div className="row2">
-                    {/** MOOD CHART SECTION **/}
                     <div className="mood-chart-container">
                         <h1>Mood Chart</h1>
                         <img src="" alt="placeholder"/>
                     </div>
 
-                    {/** QUOTE SECTION **/}
                     <div className="quote-container">
                         <h1>Quote</h1>
                         <img src="" alt="placeholder"/>
                     </div>
                 </div>
+                **/}
             </div>
         </div>
     );
