@@ -8,7 +8,7 @@
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Maya Swan | @[msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
+| Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
 | Jolisa Fields | @MelRam | Led EDA, visualized dataset distributions, handled missing data |
 | Dana Brunson | @CharlieN | Implemented explainability tools |
 | Laila Donaldson | @laila | figma, etc,etc,etc |
