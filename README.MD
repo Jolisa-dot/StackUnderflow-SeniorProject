@@ -8,7 +8,7 @@
 | Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built Sentiment NLP model, designed wellness exercises, assisted with frontend development |
 | Jolisa Fields | [@Jolisa-dot](https://github.com/Jolisa-dot) | Backend Integration, Developed core backend features including the journal system, daily check-in system, and the mood trend graph. Integrated MongoDB for data storage, built RESTful API routes|
 | Dana Brunson | [@danabrunson](https://github.com/danabrunson) | Frontend design, frontend and backend feature integration |
-| Laila Donaldson | [@lailacodes](https://github.com/lailacodes) | figma, Frontend integration|
+| Laila Donaldson | [@lailacodes](https://github.com/lailacodes) | Designing UI utilizing Figma, assisting with the development of frontend design and integration |
 | Nicolas Harris | [@NicolasHarris](https://github.com/NicolasHarris) | backend etc,etc,etc |
 
 ---
