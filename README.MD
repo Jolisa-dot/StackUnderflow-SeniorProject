@@ -10,7 +10,7 @@
 | ----- | ----- | ----- |
 | Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
 | Jolisa Fields | @Jolisa-dot | Backend Integration, visualized dataset distributions, handled missing data|
-| Dana Brunson | @CharlieN | Implemented explainability tools |
+| Dana Brunson | [@danabrunson] (https://danabrunson.github.io/)| Implemented explainability tools |
 | Laila Donaldson | @laila | figma, etc,etc,etc |
 | Nicolas Harris | @nicolas | backend etc,etc,etc |
 
