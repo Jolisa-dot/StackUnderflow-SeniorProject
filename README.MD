@@ -16,13 +16,13 @@
 ## **🎯 Project Highlights**
 
 
-* Lumi uses an analyzed enviornment with information provided from the user to supply resources/exercise suited for each individual. 
+* Lumi analyzes the environment and uses information provided by the user to supply resources/exercises suited to each individual. 
 
-* Using NLP to interpret natural language for a sentimental analysis.
+* Using NLP to interpret natural language for sentiment analysis.
 
-* Implemented AR to optimize the users experience through AR exercises.
+* Implemented AR/3D/2D tools to optimize user experience through AR exercises.
 
-* This is a project that defines different techniques such as machine learning, UI and backend development. 
+* This project defines different techniques such as machine learning, UI, and backend development. 
 
 
 ---
@@ -73,15 +73,12 @@ If you're using HTML files like journal1-frontend.html or dailycheckin.html, ope
 Lumi is a web application built using React.js and machine learning-powered sentiment analysis, designed to provide personalized emotional support.
 It allows users to express how they feel through journaling and mood tracking, and receive AI-generated feedback via features such as:
 
-* Daily emotional check-ins
-
-* Smart journaling with real-time sentiment/emotion analysis
-
-* Mood trend visualization
-
-* Curated coping tools and resources
-
-* Augmented Reality (AR)-based wellness activities (optional)
+*Personalized Daily Check Ins
+*Journaling & Reflection Feature
+*Mood Tracking
+*Resource Hub with External Links
+*AR/VR/2D based Coping Exercises 
+*Sentiment NLP Text Analysis
 
 Lumi promotes mindfulness and self-reflection by turning user input into actionable emotional insights, helping users build healthy mental wellness habits over time.
 
@@ -97,7 +94,7 @@ We implemented two pre-trained transformer-based NLP models using Hugging Face:
 
 Training Setup:
 The models were not trained or validated on custom data within our project scope. All journal and mood input was processed via real-time API calls on user-submitted text.
-Evaluation of model performance was done based on qualitative review of model output compared to expected emotional tone from test journal entries.
+Evaluation of model performance was done based on a qualitative review of model output compared to the expected emotional tone from test journal entries.
 
 Evaluation Metric:
 Since our project focuses on in-app emotional response and flagging rather than classification accuracy, evaluation was based on:
@@ -118,15 +115,21 @@ The emotion classification model provided multiple probable emotions with relati
 
 ## **🚀 Next Steps & Future Improvements**
 
-* Involves improving the application by providing security and frontend backend improvements.
-* Improving the user experience, can be achieved through UI updates and more functionality on the application.
-* Much data is generated providing a space to improve and add additional AI features.
+* Involves improving the application by providing security and frontend and backend improvements.
+* Improving the user experience can be achieved through UI updates and more functionality on the application.
+* Much data is generated, providing a space to improve and add additional AI features.
 * Future aspirations: overall enhancement and/or mobile deployment.
 
 ---
 
 ## **📄 References & Additional Resources**
 
-* Cite any relevant papers, articles, or tools used in your project
+*Currently, there are over 10,000 mental health and wellness applications available, each taking
+different approaches to supporting users’ well-being. Many focus on mood tracking, mindfulness, or cognitive
+behavioral therapy (CBT)-based techniques, but few provide a comprehensive, interactive, and adaptive
+experience that combines AI-driven insights and habit-building features.
+
+*According to the National Institute of Mental Health, approximately one in five adults in the U.S.
+experience mental health challenges.
 
 ---
