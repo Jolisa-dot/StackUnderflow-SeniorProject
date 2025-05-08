@@ -6,10 +6,10 @@
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
 | Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
-| Jolisa Fields | @Jolisa-dot | Backend Integration, visualized dataset distributions, handled missing data|
-| Dana Brunson | @danabrunson | Implemented Frontend, Frontend and Backend Integration |
-| Laila Donaldson | @laila | figma, Frontend integration|
-| Nicolas Harris | @nicolas | backend etc,etc,etc |
+| Jolisa Fields | [@Jolisa-dot](https://github.com/Jolisa-dot) | Backend Integration, visualized dataset distributions, handled missing data|
+| Dana Brunson | [@danabrunson](https://github.com/danabrunson) | Implemented Frontend, Frontend and Backend Integration |
+| Laila Donaldson | [@lailacodes](https://github.com/lailacodes) | figma, Frontend integration|
+| Nicolas Harris | [@NicolasHarris](https://github.com/NicolasHarris) | backend etc,etc,etc |
 
 ---
 
