@@ -16,9 +16,12 @@
 ## **🎯 Project Highlights**
 
 
-* Lumi uses an analyzed enviornment with information provided from the user to supply resources/exercise suited for each indiviual. 
+* Lumi uses an analyzed enviornment with information provided from the user to supply resources/exercise suited for each individual. 
+
 * Using NLP to interpret natural language for a sentimental analysis.
+
 * Implemented AR to optimize the users experience through AR exercises.
+
 * This is a project that defines different techniques such as machine learning, UI and backend development. 
 
 
@@ -45,9 +48,13 @@ Lumi is a web application built using React.js and machine learning-powered sent
 It allows users to express how they feel through journaling and mood tracking, and receive AI-generated feedback via features such as:
 
 *Daily emotional check-ins
+
 *Smart journaling with real-time sentiment/emotion analysis
+
 *Mood trend visualization
+
 *Curated coping tools and resources
+
 *Augmented Reality (AR)-based wellness activities (optional)
 
 Lumi promotes mindfulness and self-reflection by turning user input into actionable emotional insights, helping users build healthy mental wellness habits over time.
@@ -59,6 +66,7 @@ Lumi promotes mindfulness and self-reflection by turning user input into actiona
 We implemented two pre-trained transformer-based NLP models using Hugging Face:
 
 *distilbert-base-uncased-finetuned-sst-2-english for binary sentiment analysis (positive/negative)
+
 *emotion-english-distilroberta-base for multi-label emotion classification (e.g., joy, sadness, fear, anger)
 
 Training Setup:
