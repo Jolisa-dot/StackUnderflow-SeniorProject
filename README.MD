@@ -1,7 +1,4 @@
  Lumi - Mental Health Companion
-
-⚠️ _Remember to update the above title and remove all guidance notes and examples in this template, before finalizing your README_
-
 ---
 
 ### **👥 Team Members**
@@ -10,8 +7,8 @@
 | ----- | ----- | ----- |
 | Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
 | Jolisa Fields | @Jolisa-dot | Backend Integration, visualized dataset distributions, handled missing data|
-| Dana Brunson | [@danabrunson] (https://danabrunson.github.io/)| Implemented explainability tools |
-| Laila Donaldson | @laila | figma, etc,etc,etc |
+| Dana Brunson | @danabrunson | Implemented Frontend, Frontend and Backend Integration |
+| Laila Donaldson | @laila | figma, Frontend integration|
 | Nicolas Harris | @nicolas | backend etc,etc,etc |
 
 ---
@@ -44,31 +41,44 @@
 ## **🏗️ Project Overview**
 
 
-* Lumi is a web application built from reacts, js, and machine learning sentiment analysis, designed to provide emotional support. 
-  It allows users to express how they feel and recieve AI generate feedback through many different features. 
+Lumi is a web application built using React.js and machine learning-powered sentiment analysis, designed to provide personalized emotional support.
+It allows users to express how they feel through journaling and mood tracking, and receive AI-generated feedback via features such as:
 
+*Daily emotional check-ins
+*Smart journaling with real-time sentiment/emotion analysis
+*Mood trend visualization
+*Curated coping tools and resources
+*Augmented Reality (AR)-based wellness activities (optional)
+
+Lumi promotes mindfulness and self-reflection by turning user input into actionable emotional insights, helping users build healthy mental wellness habits over time.
 
 ---
 
 ## **🧠 Model Development**
 
-**Describe (as applicable):**
+We implemented two pre-trained transformer-based NLP models using Hugging Face:
 
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-* 
+*distilbert-base-uncased-finetuned-sst-2-english for binary sentiment analysis (positive/negative)
+*emotion-english-distilroberta-base for multi-label emotion classification (e.g., joy, sadness, fear, anger)
+
+Training Setup:
+The models were not trained or validated on custom data within our project scope. All journal and mood input was processed via real-time API calls on user-submitted text.
+Evaluation of model performance was done based on qualitative review of model output compared to expected emotional tone from test journal entries.
+
+Evaluation Metric:
+Since our project focuses on in-app emotional response and flagging rather than classification accuracy, evaluation was based on:
+
+Subjective alignment between detected emotion and intended tone
+Whether flagged harmful entries triggered the appropriate emergency resources
 
 ---
 
 ## **📈 Results & Key Findings**
 
-**Describe (as applicable):**
+Overall Model Performance:
 
-* Performance metrics (e.g., Kaggle Leaderboard score, F1-score)
-* How your model performed overall
-* How your model performed across different skin tones (AJL)
-* Insights from evaluating model fairness (AJL)
+Sentiment detection performed consistently well on casual, emotional, and reflective journal entries.
+The emotion classification model provided multiple probable emotions with relative confidence scores, allowing nuanced reactions from the system.
 
 
 
