@@ -37,10 +37,12 @@ Run:
 git clone https://github.com/Jolisa-dot/StackUnderflow-SeniorProject.git
 cd StackUnderflow-SeniorProject/Lumi/Code
 
+
 Step 2: Install Backend Dependencies
 Inside the Code/ folder, install all Node.js dependencies:
 
 npm install
+
 
 Step 3: Set Up Your Environment File
 In the same Code/ folder, create a file named .env
@@ -50,11 +52,13 @@ Add the following content:
 MONGO_URI=mongodb+srv://<your_username>:<your_password>@cluster.mongodb.net/lumi?retryWrites=true&w=majority
 PORT=5000
 
+
 Step 4: Start the Server
 From the Code/ folder, start the backend server:
 
 node server.js
 This will run your Express server on http://localhost:5000.
+
 
 Step 5: Test the Features
 You can now access and test your backend:
