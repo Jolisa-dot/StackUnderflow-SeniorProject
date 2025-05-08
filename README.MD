@@ -47,15 +47,15 @@
 Lumi is a web application built using React.js and machine learning-powered sentiment analysis, designed to provide personalized emotional support.
 It allows users to express how they feel through journaling and mood tracking, and receive AI-generated feedback via features such as:
 
-*Daily emotional check-ins
+* Daily emotional check-ins
 
-*Smart journaling with real-time sentiment/emotion analysis
+* Smart journaling with real-time sentiment/emotion analysis
 
-*Mood trend visualization
+* Mood trend visualization
 
-*Curated coping tools and resources
+* Curated coping tools and resources
 
-*Augmented Reality (AR)-based wellness activities (optional)
+* Augmented Reality (AR)-based wellness activities (optional)
 
 Lumi promotes mindfulness and self-reflection by turning user input into actionable emotional insights, helping users build healthy mental wellness habits over time.
 
@@ -65,9 +65,9 @@ Lumi promotes mindfulness and self-reflection by turning user input into actiona
 
 We implemented two pre-trained transformer-based NLP models using Hugging Face:
 
-*distilbert-base-uncased-finetuned-sst-2-english for binary sentiment analysis (positive/negative)
+* distilbert-base-uncased-finetuned-sst-2-english for binary sentiment analysis (positive/negative)
 
-*emotion-english-distilroberta-base for multi-label emotion classification (e.g., joy, sadness, fear, anger)
+* emotion-english-distilroberta-base for multi-label emotion classification (e.g., joy, sadness, fear, anger)
 
 Training Setup:
 The models were not trained or validated on custom data within our project scope. All journal and mood input was processed via real-time API calls on user-submitted text.
