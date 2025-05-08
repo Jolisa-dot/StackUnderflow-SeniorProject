@@ -9,7 +9,7 @@
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
 | Maya Swan | [@msmayaswan](https://github.com/msmayaswan) | Built CNN model, performed data augmentation |
-| Jolisa Fields | @MelRam | Led EDA, visualized dataset distributions, handled missing data |
+| Jolisa Fields | @Jolisa-dot | Backend Integration, visualized dataset distributions, handled missing data|
 | Dana Brunson | @CharlieN | Implemented explainability tools |
 | Laila Donaldson | @laila | figma, etc,etc,etc |
 | Nicolas Harris | @nicolas | backend etc,etc,etc |
@@ -74,10 +74,10 @@
 
 ## **🚀 Next Steps & Future Improvements**
 
-* Involes improving the application by providing security and frontend backend improvements.
-* Improving the user experience, can be achieved through UI update and more functionality on the application.
-* Much data is generated providng a space to improve and add additional AI features.
-* Future aspirations: overall enhancement and/or mobile depolyment.
+* Involves improving the application by providing security and frontend backend improvements.
+* Improving the user experience, can be achieved through UI updates and more functionality on the application.
+* Much data is generated providing a space to improve and add additional AI features.
+* Future aspirations: overall enhancement and/or mobile deployment.
 
 ---
 
